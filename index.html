@@ -325,47 +325,12 @@
       html { font-size: 80%; }
       .hero h1 { font-size: 2.4rem; }
     }
-
-    .menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background: #012a4a;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-  }
-
-  nav a {
-    margin: 1rem 0;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  header {
-    flex-wrap: wrap;
-  }
-}
-
   </style>
 </head>
 <body>
-  <!-- <header>
-    <h1>SN Home Service</h1>
+  <header>
+     <img src="sn.jpg" alt="Home Nursing Service Logo" style="width: 60px; height: 60px; object-fit: contain; vertical-align: middle;" />
+ 
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -374,23 +339,9 @@
       <a href="#charges">Charges</a>
       <a href="#reviews">Reviews</a>
       <a href="#appointment">Book Now</a>
-      <a href="tel:+919999999999">📞 Call</a>
+      <a href="tel:+918000722931">📞 Call</a>
     </nav>
-  </header> -->
-
-  <header>
-  <div class="logo">SN Home Service</div>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <nav id="main-nav">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#facilities">Facilities</a>
-    <a href="#charges">Charges</a>
-    <a href="#services">Services</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Enquiry</a>
-  </nav>
-</header>
+  </header>
 
   <section id="home" class="hero">
     <h1>Your Trusted Home Nursing Partner in Jaipur</h1>
@@ -490,17 +441,17 @@
     <h2>Our Services</h2>
     <div class="section-content card-grid">
       <div class="service-card">
-        <img class="card-img" src="https://source.unsplash.com/featured/?nurse,home" alt="Nurse Care">
+  <img src="ser1.jpg" alt="Caregiver assisting elderly" style="width:100%; border-radius:5px; margin-bottom:10px;">
         <h3>Professional Nurse Care</h3>
         <p>Certified nurses providing round-the-clock home care with compassion and expertise.</p>
       </div>
       <div class="service-card">
-        <img class="card-img" src="https://source.unsplash.com/featured/?physiotherapy,home" alt="Physiotherapy">
+  <img src="swr6.jpg" alt="Caregiver assisting elderly" style="width:100%; border-radius:5px; margin-bottom:10px;">
         <h3>Home Physiotherapy</h3>
         <p>Rehabilitation and therapy sessions at home to aid recovery and mobility.</p>
       </div>
       <div class="service-card">
-        <img class="card-img" src="https://source.unsplash.com/featured/?medical,equipment" alt="Medical Equipment">
+  <img src="swr5.jpg" alt="Caregiver assisting elderly" style="width:100%; border-radius:5px; margin-bottom:10px;">
         <h3>Medical Equipment Rental</h3>
         <p>Rent wheelchairs, oxygen cylinders, and patient beds delivered to your doorstep.</p>
       </div>
@@ -511,17 +462,17 @@
     <h2>Reviews</h2>
     <div class="section-content card-grid">
       <div class="review-card">
-        <img class="card-img" src="https://source.unsplash.com/featured/?happy,patient" alt="Review 1">
+        <!-- <img class="card-img" src="https://source.unsplash.com/featured/?happy,patient" alt="Review 1"> -->
         <h3>Rajesh S.</h3>
         <p>“Excellent service. The nurse was very professional and attentive. Highly recommend SN Home Service!”</p>
       </div>
       <div class="review-card">
-        <img class="card-img" src="https://source.unsplash.com/featured/?elderly,care" alt="Review 2">
+        <!-- <img class="card-img" src="https://source.unsplash.com/featured/?elderly,care" alt="Review 2"> -->
         <h3>Suman K.</h3>
         <p>“They provided the best care for my elderly mother. Trustworthy and well-trained staff.”</p>
       </div>
       <div class="review-card">
-        <img class="card-img" src="https://source.unsplash.com/featured/?family,healthcare" alt="Review 3">
+        <!-- <img class="card-img" src="https://source.unsplash.com/featured/?family,healthcare" alt="Review 3"> -->
         <h3>Neha B.</h3>
         <p>“Affordable and reliable home care. Booking process was smooth and quick.”</p>
       </div>
@@ -608,7 +559,7 @@
     </div>
   </section>
 
-  <section id="charges" data-aos="fade-right">
+  <!-- <section id="charges" data-aos="fade-right">
     <h2>Charges</h2>
     <div class="section-content charges-grid">
       <div class="charges-item">
@@ -632,7 +583,7 @@
         ₹600/session
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section id="appointment" data-aos="zoom-in">
     <h2>Book an Appointment</h2>
@@ -651,7 +602,9 @@
   </section>
 
   <footer>
-    &copy; 2025 SN Home Service | Designed by ExploreIndiaView
+  <p>📞 Call: +91 8000722931          | 📧 Email: <a href="mailto:snhomenursingcare@gmail.com" style="color: #fff; text-decoration: underline;">snhomenursingcare@gmail.com</a></p> <br>  
+        <p>&copy; 2025 Home Nursing Service. All rights reserved. Designed by ExploreIndiaView</p>
+ 
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -671,11 +624,6 @@
       }
       return true;
     }
-
-
-      function toggleMenu() {
-    document.getElementById('main-nav').classList.toggle('show');
-  }
   </script>
 </body>
 </html>
