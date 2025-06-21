@@ -459,26 +459,23 @@
     </div>
   </section>
 
-  <section id="reviews" data-aos="fade-up">
+<!--   <section id="reviews" data-aos="fade-up">
     <h2>Reviews</h2>
     <div class="section-content card-grid">
       <div class="review-card">
-        <!-- <img class="card-img" src="https://source.unsplash.com/featured/?happy,patient" alt="Review 1"> -->
-        <h3>Rajesh S.</h3>
+         <h3>Rajesh S.</h3>
         <p>“Excellent service. The nurse was very professional and attentive. Highly recommend SN Home Service!”</p>
       </div>
       <div class="review-card">
-        <!-- <img class="card-img" src="https://source.unsplash.com/featured/?elderly,care" alt="Review 2"> -->
-        <h3>Suman K.</h3>
+         <h3>Suman K.</h3>
         <p>“They provided the best care for my elderly mother. Trustworthy and well-trained staff.”</p>
       </div>
       <div class="review-card">
-        <!-- <img class="card-img" src="https://source.unsplash.com/featured/?family,healthcare" alt="Review 3"> -->
-        <h3>Neha B.</h3>
+         <h3>Neha B.</h3>
         <p>“Affordable and reliable home care. Booking process was smooth and quick.”</p>
       </div>
     </div>
-  </section>
+  </section> -->
 
 <!-- 
  <section id="facilities">
@@ -586,7 +583,7 @@
     </div>
   </section> -->
 
-  <section id="appointment" data-aos="zoom-in">
+<!--   <section id="appointment" data-aos="zoom-in">
     <h2>Book an Appointment</h2>
     <form onsubmit="return validateForm()">
       <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -600,7 +597,87 @@
       <textarea name="message" rows="4" placeholder="Your Message"></textarea>
       <button type="submit" class="btn">Submit</button>
     </form>
+  </section> -->
+
+     <section id="appointment" data-aos="zoom-in">
+  <h2>Book an Appointment</h2>
+  <form action="https://formspree.io/f/mgvylbwn" method="POST" onsubmit="return validateForm()">
+      <input type="hidden"   value="https://snhomenursingcare.in/thank-you.html" />
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required>
+    <input type="email" id="email" name="email" placeholder="Email Address" required>
+    <select name="service" required>
+      <option value="">Select Service</option>
+      <option value="nursing">Home Nursing</option>
+      <option value="physio">Physiotherapy</option>
+    </select>
+    <textarea name="message" rows="4" placeholder="Your Message" name="message"></textarea>
+    <button type="submit" class="btn">Submit</button>
+ 
+     
+
+
+
+  </form>
+</section>
+<script>
+document.querySelector('form').addEventListener("submit", function(e) {
+  e.preventDefault();
+  const form = this;
+  
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      window.location.href = "/thank-you.html";
+    } else {
+      alert("Submission failed. Please try again.");
+    }
+  }).catch(error => {
+    alert("Something went wrong. Please try later.");
+  });
+});
+</script>
+
+
+  <section id="reviews" data-aos="fade-up">
+    <h2>Reviews</h2>
+    <div class="section-content card-grid">
+      <div class="review-card">
+        <!-- <img class="card-img" src="https://source.unsplash.com/featured/?happy,patient" alt="Review 1"> -->
+        <h3>Rajesh S.</h3>
+        <p>“Excellent service. The nurse was very professional and attentive. Highly recommend SN Home Service!”</p>
+      </div>
+      <div class="review-card">
+        <!-- <img class="card-img" src="https://source.unsplash.com/featured/?elderly,care" alt="Review 2"> -->
+        <h3>Suman K.</h3>
+        <p>“They provided the best care for my elderly mother. Trustworthy and well-trained staff.”</p>
+      </div>
+      <div class="review-card">
+        <!-- <img class="card-img" src="https://source.unsplash.com/featured/?family,healthcare" alt="Review 3"> -->
+        <h3>Neha B.</h3>
+        <p>“Affordable and reliable home care. Booking process was smooth and quick.”</p>
+      </div>
+    </div>
   </section>
+
+ <section id="submit-review" data-aos="fade-up">
+  <h2>Submit a Review</h2>
+  <form action="https://formspree.io/f/mgvylbwn" method="POST" onsubmit="return validateReviewForm()">
+    <input type="hidden" name="_subject" value="New Review Submission from SN Home Nursing Care">
+    <input type="hidden" name="_redirect" value="https://snhomenursingcare.in/thank-you.html" />
+    
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email (optional)">
+    <textarea name="review" placeholder="Write your review here..." rows="5" required></textarea>
+    <button type="submit" class="btn">Submit Review</button>
+  </form>
+</section>
+
 
   <footer>
   <p>📞 Call: +91 8000722931          | 📧 Email: <a href="mailto:snhomenursingcare@gmail.com" style="color: #fff; text-decoration: underline;">snhomenursingcare@gmail.com</a></p> <br>  
